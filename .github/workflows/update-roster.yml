@@ -1,15 +1,21 @@
 name: Update pre-registered roster
 
 # Pulls the published Google Sheet and commits the rendered roster into
-# bc-elite-invitational-1.html + players.json. Hourly is well ahead of the rate
-# registrations actually arrive; use "Run workflow" for an immediate update
-# after adding someone.
+# bc-elite-invitational-1.html + players.json. Use "Run workflow" for an
+# immediate update after adding someone.
 #
 # Requires a repository variable ROSTER_CSV_URL — see scripts/update-roster.mjs.
+#
+# Why :17 and :47 rather than a single :00 — GitHub treats scheduled runs as
+# best-effort and drops or delays them under load, and the top of the hour is
+# the most contended slot on the platform. Two attempts an hour at off-peak
+# minutes means a skipped tick costs 30 minutes instead of a full hour. Extra
+# runs are close to free: the script only writes when the roster actually
+# changed, so a no-op run commits nothing and triggers no Pages rebuild.
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "17,47 * * * *"
   workflow_dispatch:
 
 permissions:
