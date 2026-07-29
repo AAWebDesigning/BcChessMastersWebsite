@@ -449,7 +449,7 @@ table.data .num { font-family: var(--font-mono); font-variant-numeric: tabular-n
 }
 .footer-brand .brand-name { color: var(--ivory); font-size: 1.35rem; }
 .footer-brand p { margin-top: .85rem; font-size: .92rem; max-width: 34ch; }
-.footer-col h2 {
+.footer-col .footer-head {
   font-family: var(--font-mono);
   font-size: .7rem;
   letter-spacing: .16em;
@@ -457,6 +457,7 @@ table.data .num { font-family: var(--font-mono); font-variant-numeric: tabular-n
   color: var(--brass-lit);
   margin-bottom: 1rem;
   font-weight: 500;
+  line-height: 1.08;
 }
 .footer-col a { display: block; text-decoration: none; color: rgba(239,233,219,.8); font-size: .92rem; padding: .2rem 0; }
 .footer-col a:hover { color: var(--brass-lit); }
@@ -501,6 +502,14 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   outline-color: var(--brass-lit);
 }
 
+/* ---------- Roster freshness line ---------- */
+.roster-meta {
+  margin-top: .75rem;
+  font-size: .9rem;
+  color: var(--ink-soft);
+}
+.roster-meta .roster-count { color: var(--ink); font-weight: 600; }
+
 /* ---------- Player title abbreviation (CM / NM / FM / IM / GM) ----------
    Owner decision: the lit brass is kept here deliberately. It measures
    2.38:1 on white, below the AA floor the rest of the site holds to.
@@ -508,4 +517,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .title-abbr {
   font-weight: 700;
   color: var(--brass-lit);
+  text-decoration: none;          /* suppress the UA dotted underline on <abbr> */
+  cursor: help;
 }

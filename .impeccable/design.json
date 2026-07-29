@@ -249,7 +249,7 @@
       "kind": "button",
       "refersTo": "button-on-dark",
       "description": "The hero and registration-panel action. Lit Brass fill with Forest text, used only on Forest surfaces.",
-      "html": "<div style=\"background:#14261d; padding:1.5rem; border-radius:4px;\"><a class=\"ds-btn ds-btn-on-dark\" href=\"#\">Register now <span class=\"ds-arrow\" aria-hidden=\"true\">↗</span></a></div>",
+      "html": "<div style=\"background:#14261d; padding:1.5rem; border-radius:4px;\"><a class=\"ds-btn ds-btn-on-dark\" href=\"#\">Register <span class=\"ds-arrow\" aria-hidden=\"true\">↗</span></a></div>",
       "css": ".ds-btn { display: inline-flex; align-items: center; gap: .55rem; font-family: Calibri, 'Segoe UI', Arial, Helvetica, sans-serif; font-size: .95rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 500; text-decoration: none; padding: 1.05rem 2.1rem; border-radius: 4px; border: 1px solid transparent; cursor: pointer; transition: transform .15s ease, background .15s ease; } .ds-btn-on-dark { background: #cba24a; color: #14261d; } .ds-btn-on-dark:hover { background: #dbb45c; transform: translateY(-1px); } .ds-btn-on-dark:focus-visible { outline: 2px solid #cba24a; outline-offset: 3px; } .ds-arrow { transition: transform .15s ease; } .ds-btn:hover .ds-arrow { transform: translateX(3px); }"
     },
     {
