@@ -269,6 +269,31 @@ table.data thead th {
 }
 table.data tbody tr:last-child td { border-bottom: 0; }
 table.data .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+/* Sortable headers: the button must be visually indistinguishable from a plain
+   th label, so it inherits the header's type treatment rather than restating it.
+   The arrow is the only added ink — hidden until hover, solid on the active column. */
+.th-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  transition: color .15s ease;
+}
+.th-sort:hover { color: var(--ink); }
+.th-arrow {
+  color: var(--ink-soft);
+  font-size: .9em;
+}
+th[aria-sort="ascending"] .th-arrow,
+th[aria-sort="descending"] .th-arrow { color: var(--brass); }
+
 .round-tag {
   display: inline-block;
   font-family: var(--font-mono);

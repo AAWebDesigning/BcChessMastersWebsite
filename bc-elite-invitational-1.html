@@ -366,14 +366,20 @@
               aria-hidden="true">↗</span></a>
         </div>
         <div class="table-scroll card" style="margin-top:1.5rem; padding:0;">
-          <table class="data" style="min-width:620px;">
+          <table class="data" data-sortable style="min-width:620px;">
             <thead>
               <tr>
                 <th style="width:3rem;">#</th>
                 <th>Name</th>
                 <th>CFC ID</th>
-                <th>Rating</th>
-                <th>Section</th>
+                <th aria-sort="descending">
+                  <button type="button" class="th-sort" data-type="number">Rating<span class="th-arrow"
+                      aria-hidden="true">↓</span></button>
+                </th>
+                <th aria-sort="none">
+                  <button type="button" class="th-sort" data-type="section">Section<span class="th-arrow"
+                      aria-hidden="true">↓</span></button>
+                </th>
               </tr>
             </thead>
             <tbody>
