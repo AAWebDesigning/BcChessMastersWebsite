@@ -1,4 +1,4 @@
-/* Road to Masters — light interactivity, no dependencies. */
+/* BC Chess Masters — light interactivity, no dependencies. */
 (function () {
   "use strict";
 

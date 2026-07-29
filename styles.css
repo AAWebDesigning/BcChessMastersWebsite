@@ -1,5 +1,5 @@
 /* =================================================================
-   Road to Masters — shared stylesheet
+   BC Chess Masters — shared stylesheet
    Colors: evergreen + brass + ivory. Plain system sans (Calibri/Segoe UI/Arial).
    ================================================================= */
 
@@ -500,7 +500,11 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .hero a:focus-visible, .site-header a:focus-visible, .site-footer a:focus-visible {
   outline-color: var(--brass-lit);
 }
-b
-{
-  color: var(--brass-lit);
+
+/* ---------- Player title abbreviation (CM / NM / FM / IM / GM) ---------- */
+.title-abbr {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: var(--brass);
 }
