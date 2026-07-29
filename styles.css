@@ -501,10 +501,11 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   outline-color: var(--brass-lit);
 }
 
-/* ---------- Player title abbreviation (CM / NM / FM / IM / GM) ---------- */
+/* ---------- Player title abbreviation (CM / NM / FM / IM / GM) ----------
+   Owner decision: the lit brass is kept here deliberately. It measures
+   2.38:1 on white, below the AA floor the rest of the site holds to.
+   Do not "fix" this to --brass without asking. */
 .title-abbr {
-  font-family: var(--font-mono);
   font-weight: 700;
-  letter-spacing: .06em;
-  color: var(--brass);
+  color: var(--brass-lit);
 }

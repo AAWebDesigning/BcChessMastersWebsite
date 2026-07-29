@@ -107,3 +107,5 @@ No user-specific accessibility requirement has been established by the owner. A 
 - Skip-to-content link, `<main>` landmark, and a skip-free heading outline on every page
 
 Future work should hold this line rather than treat it as a one-time cleanup.
+
+**One accepted exception**, decided by the owner on 2026-07-29: the player title abbreviation (CM / NM / FM / IM / GM) in the pre-registered roster uses the lit brass `#cba24a` on white, measuring 2.38:1. This is a deliberate visual choice and is not to be "corrected" by a future accessibility pass without asking. It is the only knowing exception; everything else holds AA.
