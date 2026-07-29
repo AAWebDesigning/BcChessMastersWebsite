@@ -407,8 +407,12 @@ table.data .num { font-family: var(--font-mono); font-variant-numeric: tabular-n
 }
 .subnav a:hover { color: var(--ink); }
 .subnav a.active { color: var(--forest); border-bottom-color: var(--brass); }
-/* offset anchors so sticky bars don't cover headings */
-.anchor { scroll-margin-top: 130px; }
+/* Offset anchors so the sticky header + sub-nav don't cover headings.
+   The fragment target is the <section id="...">, not the inner .wrap that
+   carries .anchor — the browser reads scroll-margin from the element it
+   scrolls to, so both need it or the section lands flush under the bars. */
+.anchor,
+.section[id] { scroll-margin-top: 130px; }
 
 /* ---------- Callout ---------- */
 .callout {

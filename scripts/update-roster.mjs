@@ -6,14 +6,14 @@
  * SETUP
  * -----
  * 1. In the roster spreadsheet, add a tab named `Public` containing ONLY the
- *    columns shown on the site — never Section, Bye Request or Notes. Populate
- *    it by formula from the working sheet, e.g.
- *      =QUERY(Registrations!A:H, "select G, A, B, C, D where A is not null", 1)
+ *    columns shown on the site — never Bye Request or Notes. Populate it by
+ *    formula from the working sheet, e.g.
+ *      =QUERY(Registrations!A:H, "select G, A, B, C, D, E where A is not null", 1)
  *    Never publish the working sheet itself — it holds payment reconciliation
  *    and play-up notes.
  * 2. The `Public` tab must have a header row. Column order does not matter;
  *    headers are matched by name. Recognised: Title (optional), Name — or
- *    First Name + Last Name — CFC ID, and Rating.
+ *    First Name + Last Name — CFC ID, Rating, and Section (optional).
  * 3. File → Share → Publish to web → select the `Public` tab → CSV → Publish.
  * 4. Copy the generated URL into a repository variable named ROSTER_CSV_URL
  *    (Settings → Secrets and variables → Actions → Variables → New variable).
@@ -98,6 +98,7 @@ function findColumns(header) {
   const at = (pred) => norm.findIndex(pred);
   return {
     title: at((h) => h.includes('title')),
+    section: at((h) => h.includes('section')),
     firstName: at((h) => h.includes('first')),
     lastName: at((h) => h.includes('last')),
     name: at((h) => (h.includes('name') || h.includes('player')) && !h.includes('first') && !h.includes('last')),
@@ -141,7 +142,13 @@ function toPlayers(rows) {
         name = name.slice(inline[0].length).trim();
       }
 
-      return { title, name, cfcId: cell(col.cfcId), rating: cell(col.rating) };
+      return {
+        title,
+        name,
+        cfcId: cell(col.cfcId),
+        rating: cell(col.rating),
+        section: cell(col.section),
+      };
     })
     .filter((p) => p.name)
     .sort((a, b) => (parseInt(b.rating, 10) || 0) - (parseInt(a.rating, 10) || 0));
@@ -165,6 +172,7 @@ function renderRows(players) {
         `                <td>${title}${esc(p.name)}</td>`,
         `                <td class="num">${esc(p.cfcId)}</td>`,
         `                <td class="num">${esc(p.rating)}</td>`,
+        `                <td>${esc(p.section)}</td>`,
         '              </tr>',
       ].join('\n');
     })
@@ -175,6 +183,49 @@ function renderCount(n) {
   if (n >= CAPACITY) return `Field is full — ${CAPACITY} of ${CAPACITY} places taken`;
   if (n === 1) return `1 of ${CAPACITY} places filled`;
   return `${n} of ${CAPACITY} places filled`;
+}
+
+// Returns both the machine-readable ISO datetime (with real UTC offset, for the
+// <time datetime> attribute) and the human string shown on the page, both in
+// the event's own timezone so a reader in Richmond sees local time.
+function formatStamp(date) {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: TIMEZONE,
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hour12: false,
+  }).formatToParts(date);
+  const get = (type) => parts.find((p) => p.type === type)?.value ?? '00';
+
+  const rawOffset = new Intl.DateTimeFormat('en-US', { timeZone: TIMEZONE, timeZoneName: 'longOffset' })
+    .formatToParts(date).find((p) => p.type === 'timeZoneName')?.value ?? 'GMT';
+  const offset = rawOffset.replace('GMT', '') || 'Z';
+
+  const day = new Intl.DateTimeFormat('en-GB', {
+    timeZone: TIMEZONE, day: 'numeric', month: 'long', year: 'numeric',
+  }).format(date);
+  // Labelled "PT" rather than PST/PDT: BC switches between the two twice a year,
+  // and "PT" is correct in both seasons. The real offset still rides on the
+  // <time datetime> attribute below, which tracks the switch automatically.
+  const time = new Intl.DateTimeFormat('en-US', {
+    timeZone: TIMEZONE, hour: '2-digit', minute: '2-digit', hour12: false,
+  }).format(date);
+
+  return {
+    // "24:00" is a legal Intl output for midnight but not a legal ISO hour.
+    iso: `${get('year')}-${get('month')}-${get('day')}T${get('hour') === '24' ? '00' : get('hour')}:${get('minute')}:00${offset}`,
+    human: `${day}, ${time} PT`,
+  };
+}
+
+// When the roster is unchanged, carry the previous stamp forward from the feed
+// so players.json doesn't churn either.
+function previousStamp(fallback) {
+  try {
+    const prior = JSON.parse(fs.readFileSync(FEED, 'utf-8')).updated;
+    return typeof prior === 'string' && prior ? prior : fallback;
+  } catch {
+    return fallback;
+  }
 }
 
 function replaceBlock(html, marker, content) {
@@ -215,12 +266,7 @@ async function main() {
   }
 
   const now = new Date();
-  const isoDate = new Intl.DateTimeFormat('en-CA', {
-    timeZone: TIMEZONE, year: 'numeric', month: '2-digit', day: '2-digit',
-  }).format(now);
-  const humanDate = new Intl.DateTimeFormat('en-GB', {
-    timeZone: TIMEZONE, day: 'numeric', month: 'long', year: 'numeric',
-  }).format(now);
+  const { iso: isoStamp, human: humanStamp } = formatStamp(now);
 
   const original = fs.readFileSync(PAGE, 'utf-8');
   const previousBlock = original.slice(
@@ -232,10 +278,18 @@ async function main() {
   let html = original;
   html = replaceBlock(html, 'roster', `\n${renderRows(players)}\n            `);
   html = replaceBlock(html, 'roster-count', renderCount(players.length));
-  html = replaceBlock(html, 'roster-updated', `<time datetime="${isoDate}">${humanDate}</time>`);
+
+  // The stamp records when the roster last CHANGED, not when it was last
+  // checked. Refreshing it on every run would rewrite the page hourly even
+  // when nothing moved — 24 empty commits a day and a Pages rebuild each time.
+  const dataChanged = html !== original;
+  const updatedIso = dataChanged ? isoStamp : previousStamp(isoStamp);
+  if (dataChanged) {
+    html = replaceBlock(html, 'roster-updated', `<time datetime="${isoStamp}">${humanStamp}</time>`);
+  }
 
   const feed = JSON.stringify(
-    { updated: isoDate, capacity: CAPACITY, count: players.length, players },
+    { updated: updatedIso, capacity: CAPACITY, count: players.length, players },
     null, 2,
   ) + '\n';
 

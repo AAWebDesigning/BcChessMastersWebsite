@@ -8,32 +8,40 @@ web
 
 ## Users
 
-**Primary:** chess players currently rated **2000+ CFC**, based in British Columbia (the venue is in Richmond, so the Lower Mainland is the realistic catchment). They are deciding whether to commit a full weekend and $65–80 to a first-year event from an organizer with no track record. They hold a CFC membership and know their CFC ID and current rating.
+Competitive chess players based in British Columbia (the venue is in Richmond, so the Lower Mainland is the realistic catchment), across three rating bands. All of them hold a CFC membership and know their CFC ID and current rating, and all are deciding whether to commit a full weekend and $65–80 to a first-year event from an organizer with no track record.
 
-**Secondary:** players rated **1900–1999 CFC** seeking a play-up into the field. They must request entry by email and pay a $20 play-up fee if approved. This is an admission path, not a separate section — they play in the same field.
+- **Open (2000+):** strong players seeking an entire event of appropriate opposition rather than the few competitive rounds an open Swiss yields.
+- **U2000 (1500–1999):** club-strength players who are usually the bottom half of an open field and rarely get a full weekend of even games.
+- **U1500 (below 1500):** improving players for whom a rated classical weekend is a step up in seriousness from casual or rapid play.
 
-Their job: find serious, CFC-rated classical competition against players near their own strength, without travelling outside the province.
+**Play-up players** are a cross-cutting group, not a fourth audience: 1900–1999 may play up into Open, 1400–1499 into U2000. Eligibility is automatic — being in the band is the whole qualification — and the $20 fee is the only condition. Placement is arranged by email.
+
+Their shared job: find serious, CFC-rated classical competition against players near their own strength, without travelling outside the province.
 
 ## Product Purpose
 
-BC Chess Masters organizes CFC-rated classical chess tournaments in British Columbia for higher-rated players. Its first event is **BC Elite Invitational 1** — five games over two days, August 29–30 2026, at the Executive Hotel Vancouver Airport in Richmond BC.
+BC Chess Masters organizes CFC-rated classical chess tournaments in British Columbia. Its first event is **BC Elite Invitational 1** — five games over two days, August 29–30 2026, at the Executive Hotel Vancouver Airport in Richmond BC, played across three rating sections.
 
-Success for this first event is filling the 25-player field with genuinely 2000+ players and running it cleanly enough to justify a second. A continuing series is the intent but **not a commitment** — see Capabilities and Constraints.
+Success for this first event is filling the 25-place field with correctly-sectioned players and running it cleanly enough to justify a second. A continuing series is the intent but **not a commitment** — see Capabilities and Constraints.
 
 ## Positioning
 
-**The rating floor is the product.** A 2000+ entry requirement means a strong player gets an entire event of appropriate opposition, rather than the few competitive rounds an open Swiss yields after the early mismatches burn off.
+**Every player gets a full weekend of even games, and every dollar goes back into BC chess.**
 
-This is the claim a neighbouring organizer could not truthfully copy without adopting the same floor and accepting the same smaller field. It is a deliberate trade of volume for field quality, and future product decisions should protect it rather than dilute it for entries.
+The sectioning is the mechanism: three narrow rating bands mean nobody spends the early rounds in mismatches, whether they are 2100 or 1300. An open Swiss gives its strongest and weakest entrants two or three meaningful games out of five; narrow sections give everybody five.
+
+The non-profit structure is the claim a neighbouring organizer cannot truthfully copy: BC Chess Masters states that 100% of event earnings are reinvested into future tournaments or donated to organizations supporting the chess community. Future product decisions should protect both halves — the sectioning discipline and the reinvestment commitment.
+
+> **Derived, not yet confirmed by the owner.** This positioning was written from the About page copy added on 2026-07-29 ("non-profit", "100% of earnings reinvested", "sections carefully designed for norms, elite competition and rating opportunities"). It replaces an earlier positioning built on a single 2000+ floor, which the three-section structure made obsolete. Confirm or correct it.
 
 ## Operating Context
 
-- **Format:** two-day weekend event in a hotel function room. Five rounds, Swiss, one section. Rounds 1–3 at 50 min + 10s increment on day one; rounds 4–5 at 90 min + 30s on day two.
+- **Format:** two-day weekend event in a hotel function room. Five rounds, Swiss, **three sections** (Open, U2000, U1500) sharing one schedule and one set of time controls. Rounds 1–3 at 50 min + 10s increment on day one; rounds 4–5 at 90 min + 30s on day two.
 - **Tie-breaks**, in order: direct encounter, Buchholz Cut 1, Buchholz, Sonneborn-Berger.
 - **Registration** runs off-site through a Google Form. **Payment** is Interac e-Transfer to `bcchessmasters@gmail.com`, reconciled manually by the organizer; a registration is confirmed only once payment is received. Registration closes **August 28 2026**, or earlier if the field fills.
 - **Roster:** the authoritative pre-registered player list lives in a Google Sheet, mirrored as a snapshot on the site.
 - **Rating dependency:** every game is CFC-rated, so each player must hold a current CFC membership from chess.ca. This is an external dependency the organizer does not control.
-- **Play-up requests** are handled by email, one at a time, at the organizer's discretion.
+- **Play-ups are an entitlement, not a discretionary grant.** Any player inside an eligible band gets the higher section on paying the $20 fee; the organizer does not screen, judge, or refuse them. Placement is arranged by email. Everyone else is seated by current rating.
 - The entire operation is run by hand, by a very small team, with a spreadsheet and an email account.
 - **Deployment:** static site served at **bcchessmasters.com** (GitHub Pages; `CNAME` in repo root).
 
@@ -42,8 +50,12 @@ This is the claim a neighbouring organizer could not truthfully copy without ado
 **Confirmed:**
 
 - Dates, venue, address, round times, time controls, and tie-break order as described in Operating Context.
-- **Rating floor:** 2000+ CFC, with 1900–1999 admitted by approved play-up request.
-- **Field capacity:** 25 players, first-come first-served, closing when full.
+- **Sections**, by current CFC rating, all playing the same schedule and time controls:
+  - **Open** — 2000 and above
+  - **U2000** — 1500 to 1999
+  - **U1500** — below 1500
+- **Play-ups:** 1900–1999 may play up into Open; 1400–1499 into U2000. Automatic for anyone in those bands — **not subject to approval** — with a $20 fee. Do not describe them as granted, approved, or at the organizer's discretion.
+- **Field capacity:** 25 players **in total across all three sections** — not 25 per section — first-come first-served, closing when full.
 - **Fees:** $65 early bird before Aug 8 2026; $80 regular from Aug 8; **+$20** play-up; **−$10** sibling discount (off a second sibling's entry); **50% off** titled discount for **NM or higher — CM does not qualify**.
 - **Forfeit time:** 30 minutes in the 50+10 rounds; 60 minutes in the 90+30 rounds.
 - **Refunds:** full refund on or before Aug 8; 50% before Aug 27; none after registration closes Aug 28.
@@ -58,8 +70,8 @@ This is the claim a neighbouring organizer could not truthfully copy without ado
 **Explicitly undecided.** Future work must not invent values for these:
 
 - Google Form URL — the Register button still points at a `[[ PASTE GOOGLE FORM LINK ]]` placeholder, so registration is currently unreachable from the site
-- Social presence, if any
-- Founding story and who runs the organization
+- Who specifically runs the organization — named individuals are still absent from About
+- Prize structure per section
 - Prize fund — none has been stated anywhere, and none should be implied
 - **Whether a second event happens at all** — the series is conditional on this one working
 
@@ -68,7 +80,9 @@ This is the claim a neighbouring organizer could not truthfully copy without ado
 - **Name: "BC Chess Masters"** — settled, and matched by the domain `bcchessmasters.com`, the contact address, and every page. A prior working name, "Road to Masters", is obsolete and must not appear in public copy.
 - **Journey to Masters (JtM) is not part of the public story.** Do not reference JtM, imply lineage from it, or claim continuity with prior events in any public-facing copy.
 - Descriptor in use: "Chess · British Columbia".
-- Tagline in use: "Building the road to mastery, one classical game at a time." The "road to mastery" phrasing survives as a tagline only; it is not the organization's name.
+- **No tagline.** "Building the road to mastery, one classical game at a time." was retired from all four footers on 2026-07-29. With it gone, no trace of the old "Road to Masters" phrasing remains anywhere on the site. Do not reintroduce a tagline without the owner asking for one.
+- **Stated as non-profit.** The About page states BC Chess Masters "is a non-profit" and that "every dollar earned from our events is either reinvested into future tournaments or donated to organizations that directly support and strengthen the chess community." Treat both as binding public commitments. ⚠️ *"Non-profit" is a legally meaningful term in Canada — confirm the organization is actually incorporated as one, or soften the wording to describe the practice rather than the legal status.*
+- **No social presence.** The Social section was removed from Contact on 2026-07-29. Do not add social links or placeholders back without a real account to link.
 - **Voice — confirmed binding.** Copy is plain, literal, and domain-fluent: it states numbers and rules rather than selling. No marketing language, no superlatives, no urgency devices. A warmer, more human register is permitted on About and Contact, but the no-marketing floor holds everywhere, including there.
 
 ## Evidence on Hand
@@ -77,7 +91,8 @@ This is the claim a neighbouring organizer could not truthfully copy without ado
 
 - Venue and address: Executive Hotel Vancouver Airport, 7311 Westminster Hwy, Richmond BC V6X 1A1
 - Pre-registered player list: live Google Sheet (URL in `bc-elite-invitational-1.html`) — note this is currently linked in its `/edit` form and should be published or set view-only
-- Three confirmed pre-registered players, real names with CFC IDs and ratings, mirrored in the on-site snapshot (CM Barath Subramanian Suresh 2171, Aadit Arya 2159, Zhengyu Chen 2132)
+- **Twelve** confirmed pre-registered players as of 2026-07-29, real names with CFC IDs, ratings and section, held in the roster sheet. Top of the field: CM Barath Subramanian Suresh 2171, Aadit Arya 2159, Zhengyu Chen 2132; the lowest is a play-up at 1907. All twelve are currently in Open.
+- The on-site table mirrors the sheet through a scheduled GitHub Action (`scripts/update-roster.mjs`); the sheet's `Public` tab is the only part published, and Bye Request and Notes are never exposed
 - CFC membership signup: `chess.ca/en/players/membership-join/`
 - Sole brand asset: an inline SVG pawn mark in each page header, plus `favicon-32x32.png`. There is no `assets/` directory.
 
@@ -92,7 +107,7 @@ This is the claim a neighbouring organizer could not truthfully copy without ado
 
 ## Product Principles
 
-1. **Protect the floor.** The 2000+ requirement is the entire proposition. Filling seats by lowering it destroys the reason the event exists.
+1. **Protect the sections.** Narrow bands are the entire proposition — every entrant should get five even games. Merging sections to make a bracket look fuller destroys the reason the event exists.
 2. **Say the number, not the adjective.** This audience reads "90 min + 30s" and "Buchholz Cut 1" fluently. Specificity is the register; promotional language reads as a warning sign to them.
 3. **A first-year event sells on certainty.** With no track record, published decisions are the only proof available. An unwritten policy costs more trust than an unfavourable one — which is why capacity, refunds, byes, forfeits, and devices are now all published.
 4. **Everything published must be honourable by hand.** No backend exists. Do not promise live standings, instant confirmation, or automated anything that two people with a spreadsheet cannot deliver on the weekend.

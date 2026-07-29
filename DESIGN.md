@@ -220,6 +220,8 @@ Density is deliberately low. Cards use `clamp(1.4rem, 3vw, 2rem)` of internal pa
 
 **Sticky chrome:** the header is sticky at `top: 0` with a 68px minimum height; the tournament sub-nav is sticky beneath it at exactly `top: 68px`. Anchored sections carry `scroll-margin-top: 130px` so a jump-link target never lands under either bar. **These three numbers are coupled — changing the header height requires changing the other two.**
 
+The offset must sit on **the element carrying the `id`**, which is the `<section>`, not the inner `.wrap`. The rule is therefore `.anchor, .section[id]`. Putting it only on the inner wrapper silently does nothing: the browser reads `scroll-margin` from the element it scrolls to, so the section lands flush at viewport top and its own padding pushes the heading under the sticky bars.
+
 **Breakpoints** are currently four ad-hoc values: 780px (column splits), 760px (nav collapse), 680px (footer regrouping), 620px (spec rows stack). They are per-component rather than systematic. Preserve them as-is when editing existing components; if the set grows further, consolidate to a named scale first.
 
 ## Elevation & Depth
