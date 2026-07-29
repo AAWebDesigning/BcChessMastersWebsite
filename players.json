@@ -1,0 +1,91 @@
+{
+  "updated": "2026-07-29T04:50:00-07:00",
+  "capacity": 25,
+  "count": 12,
+  "players": [
+    {
+      "title": "CM",
+      "name": "Barath Subramanian Suresh",
+      "cfcId": "176909",
+      "rating": "2171",
+      "section": ""
+    },
+    {
+      "title": "",
+      "name": "Aadit Arya",
+      "cfcId": "176377",
+      "rating": "2159",
+      "section": ""
+    },
+    {
+      "title": "",
+      "name": "Zhengyu Chen",
+      "cfcId": "166532",
+      "rating": "2132",
+      "section": ""
+    },
+    {
+      "title": "",
+      "name": "Ashton Taylor",
+      "cfcId": "147575",
+      "rating": "2127",
+      "section": ""
+    },
+    {
+      "title": "NM",
+      "name": "Justin Gao",
+      "cfcId": "166536",
+      "rating": "2126",
+      "section": ""
+    },
+    {
+      "title": "NM",
+      "name": "Ryan Leong",
+      "cfcId": "150533",
+      "rating": "2117",
+      "section": ""
+    },
+    {
+      "title": "",
+      "name": "Aiden Leong",
+      "cfcId": "165082",
+      "rating": "2110",
+      "section": ""
+    },
+    {
+      "title": "AFM",
+      "name": "Minjun Koo",
+      "cfcId": "179665",
+      "rating": "2108",
+      "section": ""
+    },
+    {
+      "title": "",
+      "name": "Brooks Jiang",
+      "cfcId": "190203",
+      "rating": "2047",
+      "section": ""
+    },
+    {
+      "title": "",
+      "name": "Ryan Golchin",
+      "cfcId": "166537",
+      "rating": "2026",
+      "section": ""
+    },
+    {
+      "title": "",
+      "name": "Nathan Yi-Hsin Yang",
+      "cfcId": "168064",
+      "rating": "2012",
+      "section": ""
+    },
+    {
+      "title": "",
+      "name": "Henry Fan",
+      "cfcId": "171593",
+      "rating": "1907",
+      "section": ""
+    }
+  ]
+}
