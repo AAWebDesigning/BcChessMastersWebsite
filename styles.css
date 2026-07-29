@@ -500,3 +500,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .hero a:focus-visible, .site-header a:focus-visible, .site-footer a:focus-visible {
   outline-color: var(--brass-lit);
 }
+b
+{
+  color: var(--brass-lit);
+}
