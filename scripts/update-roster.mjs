@@ -125,6 +125,16 @@ function toPlayers(rows) {
     );
   }
 
+  // Not fatal — a missing Section shouldn't block the whole roster — but it
+  // renders as a column of empty cells, which reads as a broken table rather
+  // than as missing data. Say so in the log.
+  if (col.section === -1) {
+    console.warn(
+      'Warning: no Section column in the published sheet, so that column will render empty. ' +
+      'Add E to the Public tab\'s QUERY — "select G, A, B, C, D, E where A is not null" — to include it.',
+    );
+  }
+
   return body
     .map((r) => {
       const cell = (i) => (i === -1 ? '' : String(r[i] ?? '').trim());
