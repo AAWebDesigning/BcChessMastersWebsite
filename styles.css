@@ -68,8 +68,25 @@ h1, h2, h3, h4 { line-height: 1.08; font-weight: 600; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); }
 .split-wide { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); }
 .split-feature { display: grid; grid-template-columns: 1.3fr .9fr; gap: 2rem; align-items: center; }
+
+/* Stat list beside the featured event. The rule is a column divider, so once the
+   columns stack it has to become a horizontal one — a left border with 2rem of
+   indent reads as a stray hanging line on a phone. */
+.feature-stats {
+  display: grid;
+  gap: 1rem;
+  border-left: 1px solid var(--ivory-line);
+  padding-left: 2rem;
+}
+
 @media (max-width: 780px) {
   .split, .split-wide, .split-feature { grid-template-columns: 1fr; }
+  .feature-stats {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--ivory-line);
+    padding-top: 1.5rem;
+  }
 }
 
 .eyebrow {
@@ -81,7 +98,6 @@ h1, h2, h3, h4 { line-height: 1.08; font-weight: 600; }
   font-weight: 500;
   margin-bottom: 1rem;
 }
-.eyebrow--light { color: var(--brass-lit); }
 
 .section-title {
   font-family: var(--font-display);
@@ -278,7 +294,11 @@ table.data .num { font-family: var(--font-mono); font-variant-numeric: tabular-n
   gap: .4rem;
   background: none;
   border: 0;
-  padding: 0;
+  /* Fill the header cell rather than just wrapping the label. Padding alone
+     would double the cell's own; the matching negative margin pulls the button
+     back out to the cell edges, giving a ~44px target instead of ~18px. */
+  padding: .8rem 1rem;
+  margin: -.8rem -1rem;
   font: inherit;
   color: inherit;
   letter-spacing: inherit;
@@ -452,7 +472,10 @@ th[aria-sort="descending"] .th-arrow { color: var(--brass); }
 
 /* ---------- Prose ---------- */
 .prose p { margin-top: 1rem; color: var(--ink-soft); max-width: 68ch; }
-.prose p:first-child { margin-top: 0; }
+/* Any first child, not just a paragraph. A .prose block opening with a heading
+   would otherwise inherit the 2rem heading margin and push itself away from the
+   section title above it. */
+.prose > :first-child { margin-top: 0; }
 .prose a:not(.btn) { color: var(--brass); text-decoration: underline; text-underline-offset: 2px; }
 .prose ul { margin-top: 1rem; padding-left: 1.2rem; color: var(--ink-soft); max-width: 68ch; }
 .prose li { margin-top: .4rem; }
@@ -521,13 +544,22 @@ th[aria-sort="descending"] .th-arrow { color: var(--brass); }
   left: 0;
 }
 
-/* ---------- Focus visibility ---------- */
+/* ---------- Focus visibility ----------
+   The Two Brasses Rule applies to the focus ring too. The deep brass carries it
+   on light surfaces (5.5:1 on white); the lit brass carries it on the dark ones
+   (6.6:1 on forest). Swapped, either direction lands near 2.4–2.9:1 — under the
+   3:1 floor WCAG 2.2 sets for non-text indicators. `.register` is a dark surface
+   and must be in the second list. */
 a:focus-visible, button:focus-visible, .btn:focus-visible {
-  outline: 2px solid var(--brass-lit);
+  outline: 2px solid var(--brass);
   outline-offset: 3px;
   border-radius: 2px;
 }
-.hero a:focus-visible, .site-header a:focus-visible, .site-footer a:focus-visible {
+.hero a:focus-visible, .hero button:focus-visible, .hero .btn:focus-visible,
+.site-header a:focus-visible, .site-header button:focus-visible,
+.site-footer a:focus-visible, .site-footer button:focus-visible,
+.register a:focus-visible, .register button:focus-visible, .register .btn:focus-visible,
+.skip-link:focus-visible {
   outline-color: var(--brass-lit);
 }
 

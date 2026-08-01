@@ -60,8 +60,10 @@ The non-profit structure is the claim a neighbouring organizer cannot truthfully
 - **Forfeit time:** 30 minutes in the 50+10 rounds; 60 minutes in the 90+30 rounds.
 - **Refunds:** full refund on or before Aug 8; 50% before Aug 27; none after registration closes Aug 28.
 - **Withdrawals:** notice must be given before rounds are paired; once paired, withdrawals are not considered.
-- **Byes:** up to two half-point byes per player, requested in advance. A round 5 bye is worth 0 points.
+- **Byes:** up to two half-point byes per player, requested in advance. A request made mid-event for the next round must arrive before that round is paired. A round 5 bye is worth 0 points.
 - **Electronic devices:** all devices stored away. A device found on a player's person, or ringing, forfeits the round, with possible disqualification at the arbiter's discretion.
+- **Photography:** permitted during the first 5 minutes of each round, then not. Published 2026-08-01. A photo-consent clause was briefly added the same day and removed at the owner's request — do not reinstate it unasked.
+- **No food in the playing area.** Published 2026-08-01. Drinks are not addressed either way — do not infer a rule about them.
 - **Parking:** limited, first-come first-served, at the venue.
 - **Playing room:** Fraser Room.
 - **Public contact and e-Transfer recipient:** `bcchessmasters@gmail.com` (one address serves both).

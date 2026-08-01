@@ -1,0 +1,3 @@
+# Impeccable design-tooling sidecar. Local tooling state, not site source —
+# DESIGN.md at the repo root remains the tracked, human-readable record.
+.impeccable/
