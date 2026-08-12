@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-11T14:28:00-07:00",
+  "updated": "2026-08-12T02:48:00-07:00",
   "capacity": 25,
-  "count": 16,
+  "count": 15,
   "players": [
     {
       "title": "",
@@ -22,13 +22,6 @@
       "name": "Zhengyu Chen",
       "cfcId": "166532",
       "rating": "2132",
-      "section": "Open"
-    },
-    {
-      "title": "",
-      "name": "Ashton Taylor",
-      "cfcId": "147575",
-      "rating": "2127",
       "section": "Open"
     },
     {
@@ -53,13 +46,6 @@
       "section": "Open"
     },
     {
-      "title": "AFM",
-      "name": "Minjun Koo",
-      "cfcId": "179665",
-      "rating": "2108",
-      "section": "Open"
-    },
-    {
       "title": "",
       "name": "Ryan Golchin",
       "cfcId": "166537",
@@ -71,6 +57,13 @@
       "name": "Brooks Jiang",
       "cfcId": "190203",
       "rating": "2047",
+      "section": "Open"
+    },
+    {
+      "title": "NM",
+      "name": "Joshua Rubin",
+      "cfcId": "197600",
+      "rating": "2046",
       "section": "Open"
     },
     {
