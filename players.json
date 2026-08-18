@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-14T02:44:00-07:00",
+  "updated": "2026-08-18T02:54:00-07:00",
   "capacity": 25,
-  "count": 16,
+  "count": 17,
   "players": [
     {
       "title": "",
@@ -78,6 +78,13 @@
       "name": "Samuel Lu",
       "cfcId": "177625",
       "rating": "2045",
+      "section": "Open"
+    },
+    {
+      "title": "",
+      "name": "Joey Xu",
+      "cfcId": "166559",
+      "rating": "2036",
       "section": "Open"
     },
     {
