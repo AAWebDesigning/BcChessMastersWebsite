@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-23T23:26:00-07:00",
+  "updated": "2026-08-24T13:11:00-07:00",
   "capacity": 25,
-  "count": 21,
+  "count": 22,
   "players": [
     {
       "title": "NM",
@@ -22,6 +22,13 @@
       "name": "Barath Subramanian Suresh",
       "cfcId": "176909",
       "rating": "2171",
+      "section": "Open"
+    },
+    {
+      "title": "",
+      "name": "Kai Zhongkai Zhang",
+      "cfcId": "173562",
+      "rating": "2153",
       "section": "Open"
     },
     {
