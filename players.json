@@ -1,8 +1,15 @@
 {
-  "updated": "2026-08-18T02:54:00-07:00",
+  "updated": "2026-08-23T23:26:00-07:00",
   "capacity": 25,
-  "count": 17,
+  "count": 21,
   "players": [
+    {
+      "title": "NM",
+      "name": "Tristan Taylor",
+      "cfcId": "146358",
+      "rating": "2224",
+      "section": "Open"
+    },
     {
       "title": "",
       "name": "Aadit Arya",
@@ -103,6 +110,20 @@
     },
     {
       "title": "",
+      "name": "Martin Lorenz",
+      "cfcId": "175708",
+      "rating": "1785",
+      "section": "U2000"
+    },
+    {
+      "title": "",
+      "name": "Andrew Li",
+      "cfcId": "191553",
+      "rating": "1638",
+      "section": "U2000"
+    },
+    {
+      "title": "",
       "name": "John David Moje",
       "cfcId": "158712",
       "rating": "1615",
@@ -120,6 +141,13 @@
       "name": "Yaswitha Suresh",
       "cfcId": "190751",
       "rating": "1337",
+      "section": "U1500"
+    },
+    {
+      "title": "",
+      "name": "Hannah Li",
+      "cfcId": "189803",
+      "rating": "663",
       "section": "U1500"
     }
   ]
