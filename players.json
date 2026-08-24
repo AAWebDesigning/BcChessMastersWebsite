@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-24T15:03:00-07:00",
+  "updated": "2026-08-24T15:45:00-07:00",
   "capacity": 25,
-  "count": 22,
+  "count": 23,
   "players": [
     {
       "title": "NM",
@@ -148,6 +148,13 @@
       "name": "Yaswitha Suresh",
       "cfcId": "190751",
       "rating": "1337",
+      "section": "U1500"
+    },
+    {
+      "title": "",
+      "name": "Matteo Hrbacek",
+      "cfcId": "188253",
+      "rating": "1157",
       "section": "U1500"
     },
     {
