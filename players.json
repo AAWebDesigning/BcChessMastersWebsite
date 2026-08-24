@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T13:11:00-07:00",
+  "updated": "2026-08-24T13:49:00-07:00",
   "capacity": 25,
   "count": 22,
   "players": [
@@ -155,7 +155,7 @@
       "name": "Hannah Li",
       "cfcId": "189803",
       "rating": "663",
-      "section": "U1500"
+      "section": ""
     }
   ]
 }
