@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T14:12:00-07:00",
+  "updated": "2026-08-25T16:59:00-07:00",
   "capacity": 25,
   "count": 24,
   "players": [
@@ -155,21 +155,21 @@
       "name": "Yaswitha Suresh",
       "cfcId": "190751",
       "rating": "1337",
-      "section": "U1500"
+      "section": "U2000"
     },
     {
       "title": "",
       "name": "Matteo Hrbacek",
       "cfcId": "188253",
       "rating": "1157",
-      "section": "U1500"
+      "section": "U2000"
     },
     {
       "title": "",
       "name": "Hannah Li",
       "cfcId": "189803",
       "rating": "663",
-      "section": "U1500"
+      "section": "U2000"
     }
   ]
 }
