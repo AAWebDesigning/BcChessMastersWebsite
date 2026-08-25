@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-24T15:45:00-07:00",
+  "updated": "2026-08-25T14:12:00-07:00",
   "capacity": 25,
-  "count": 23,
+  "count": 24,
   "players": [
     {
       "title": "NM",
@@ -106,6 +106,13 @@
       "name": "Nathan Yi-Hsin Yang",
       "cfcId": "168064",
       "rating": "2012",
+      "section": "Open"
+    },
+    {
+      "title": "",
+      "name": "Ethan Jun Low",
+      "cfcId": "172510",
+      "rating": "1917",
       "section": "Open"
     },
     {
