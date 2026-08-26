@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T16:59:00-07:00",
+  "updated": "2026-08-26T00:09:00-07:00",
   "capacity": 25,
   "count": 24,
   "players": [
@@ -102,7 +102,7 @@
       "section": "Open"
     },
     {
-      "title": "AFM",
+      "title": "",
       "name": "Nathan Yi-Hsin Yang",
       "cfcId": "168064",
       "rating": "2012",
