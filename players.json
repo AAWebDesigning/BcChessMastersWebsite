@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-26T00:09:00-07:00",
+  "updated": "2026-08-28T04:24:00-07:00",
   "capacity": 25,
-  "count": 24,
+  "count": 25,
   "players": [
     {
       "title": "NM",
@@ -29,6 +29,13 @@
       "name": "Kai Zhongkai Zhang",
       "cfcId": "173562",
       "rating": "2153",
+      "section": "Open"
+    },
+    {
+      "title": "",
+      "name": "Viktor Musakhanyan",
+      "cfcId": "184327",
+      "rating": "2145",
       "section": "Open"
     },
     {
