@@ -1,8 +1,15 @@
 {
-  "updated": "2026-08-28T04:24:00-07:00",
+  "updated": "2026-08-29T03:26:00-07:00",
   "capacity": 25,
-  "count": 25,
+  "count": 26,
   "players": [
+    {
+      "title": "NM",
+      "name": "Yidong Chen",
+      "cfcId": "186069",
+      "rating": "2269",
+      "section": "Open"
+    },
     {
       "title": "NM",
       "name": "Tristan Taylor",
